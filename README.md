@@ -20,7 +20,7 @@ The __LivePaper SDK for iOS__ lets you create QR codes, watermark images and sho
    ```objc
 LivePaperSession *lpSession = [LivePaperSession createSessionWithClientID:”CLIENT_ID” secret:”CLIENT_SECRET”];
 ```
-5. Use LivePaperSession to create QR codes, watermark images and short URLs.
+5. Use `LivePaperSession` to create QR codes, watermark images and short URLs.
 
 ### TO CREATE SHORT URL:
 
@@ -38,7 +38,7 @@ LivePaperSession *lpSession = [LivePaperSession createSessionWithClientID:”CLI
 
 ### TO CREATE QR CODE:
 
- ```objc
+```objc
     NSString *name = @“My QR Code";
     NSURL *url = [NSURL URLWithString:@"https://www.linkcreationstudio.com"];
     [lpSession createQrCode:name destination:url completionHandler:^(UIImage *image, NSError *error) {
@@ -52,7 +52,7 @@ LivePaperSession *lpSession = [LivePaperSession createSessionWithClientID:”CLI
 
 ### TO CREATE WATERMARK:
 
- ```objc
+```objc
     NSString *name = @“My Watermark";
     NSURL *url = [NSURL URLWithString:@"https://www.linkcreationstudio.com"];
     NSURL *imageURL = [NSURL URLWithString:@"https://s3-us-west-1.amazonaws.com/linkcreationstudio.com/developer/zion_600x450.jpg"];
