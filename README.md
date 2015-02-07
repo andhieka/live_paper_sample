@@ -9,23 +9,18 @@ The __LivePaper SDK for iOS__ lets you create QR codes, watermark images and sho
 ### HOW TO USE THE SDK
 
 1. Unpack the SDK zip file.
-
 2. Drag the “LivePaperSDK.framework” folder to your Xcode project. When prompted, select “Copy items into destination group’s folder”.
-
 3. Include `LivePaperSDK.h` in your source code:
-
-```objc
+   
+   ```objc
 #import <LivePaperSDK/LivePaperSDK.h>
 ```
-
 4. Create an instance of LivePaperSession using your client ID and secret, which you can get from the Link Developer website.
 
-```objc
+   ```objc
 LivePaperSession *lpSession = [LivePaperSession createSessionWithClientID:”CLIENT_ID” secret:”CLIENT_SECRET”];
 ```
-
 5. Use LivePaperSession to create QR codes, watermark images and short URLs.
-
 
 ### TO CREATE SHORT URL:
 
