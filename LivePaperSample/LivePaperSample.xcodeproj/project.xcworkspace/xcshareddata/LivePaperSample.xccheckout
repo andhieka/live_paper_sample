@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>DB196BF6-25A5-4CCA-8652-84B9F9C07EEA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LivePaperSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>EC68EF32D99B09EE3A2B4863CD5613FBE3DC2800</key>
+		<string>github.com:IPGPTP/neon_sdk_ios.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LivePaperSample/LivePaperSample.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>EC68EF32D99B09EE3A2B4863CD5613FBE3DC2800</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:IPGPTP/neon_sdk_ios.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>EC68EF32D99B09EE3A2B4863CD5613FBE3DC2800</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>EC68EF32D99B09EE3A2B4863CD5613FBE3DC2800</string>
+			<key>IDESourceControlWCCName</key>
+			<string>neon_sdk_ios</string>
+		</dict>
+	</array>
+</dict>
+</plist>
