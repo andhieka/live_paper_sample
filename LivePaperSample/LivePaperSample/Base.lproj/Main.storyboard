@@ -54,10 +54,20 @@
                                     <action selector="onCreateQrCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="klB-6y-fJ7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bA-xb-CFF" userLabel="CreateWatemarkWithRichPayoff">
+                                <rect key="frame" x="174" y="412" width="250" height="40"/>
+                                <state key="normal" title="Create Watermark With Rich Payoff">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCreateWatermarkWithRichPayoff:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pXS-gJ-9bt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="sbM-sX-BJi" secondAttribute="centerX" id="0Nf-rO-EPu"/>
+                            <constraint firstAttribute="centerX" secondItem="7bA-xb-CFF" secondAttribute="centerX" id="AXR-mZ-HgX"/>
                             <constraint firstAttribute="centerX" secondItem="rsm-fn-xnK" secondAttribute="centerX" id="b19-eU-nHA"/>
                             <constraint firstItem="qVf-Pk-cOl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mSS-Bv-hX5"/>
                         </constraints>
