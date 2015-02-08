@@ -18,6 +18,7 @@
 - (IBAction)onCreateShortURL:(id)sender;
 - (IBAction)onCreateQrCode:(id)sender;
 - (IBAction)onCreateWatermark:(id)sender;
+- (IBAction)onCreateWatermarkWithRichPayoff:(id)sender;
 
 @end
 
@@ -60,7 +61,7 @@
 }
 
 - (IBAction)onCreateShortURL:(id)sender {
-    NSString *name = @"Short URL from iOS";
+    NSString *name = @"Short URL with Basic Payoff";
     NSURL *url = [NSURL URLWithString:@"https://www.linkcreationstudio.com"];
     [_lpSession createShortUrl:name destination:url completionHandler:^(NSURL *shortUrl, NSError *error) {
         if (shortUrl) {
@@ -72,7 +73,7 @@
 }
 
 - (IBAction)onCreateQrCode:(id)sender {
-    NSString *name = @"QrCode from iOS";
+    NSString *name = @"QrCode with Basic Payoff";
     NSURL *url = [NSURL URLWithString:@"https://www.linkcreationstudio.com"];
     [_lpSession createQrCode:name destination:url completionHandler:^(UIImage *image, NSError *error) {
         if (image) {
@@ -84,10 +85,50 @@
 }
 
 - (IBAction)onCreateWatermark:(id)sender {
-    NSString *name = @"Watermark from iOS";
+    NSString *name = @"Watermark with Basic Payoff";
     NSURL *url = [NSURL URLWithString:@"https://www.linkcreationstudio.com"];
     NSURL *imageURL = [NSURL URLWithString:@"https://s3-us-west-1.amazonaws.com/linkcreationstudio.com/developer/zion_600x450.jpg"];
     [_lpSession createWatermark:name destination:url imageURL:imageURL completionHandler:^(UIImage *watermarkedImage, NSError *error) {
+        if (watermarkedImage) {
+            [self showAlert:@"Watermarked Image" image:watermarkedImage];
+        } else {
+            [self showAlert:@"Error" message:[error description]];
+        }
+    }];
+}
+
+- (IBAction)onCreateWatermarkWithRichPayoff:(id)sender {
+    NSString *name = @"Watermark with Rich Payoff";
+    NSURL *url = [NSURL URLWithString:@"https://www.linkcreationstudio.com"];
+    NSURL *imageURL = [NSURL URLWithString:@"http://static.movember.com/uploads/2014/profiles/ef4/ef48a53fb031669fe86e741164d56972-546b9b5c56e15-hero.jpg"];
+    NSDictionary *richPayoffData = @{
+                                     @"type" : @"content action layout",
+                                     @"version" : @"1",
+                                     @"data" : @{
+                                             @"content" : @{
+                                                     @"type" : @"image",
+                                                     @"label" : @"Movember!",
+                                                     @"data" : @{
+                                                             @"URL" : @"http://static.movember.com/uploads/2014/profiles/ef4/ef48a53fb031669fe86e741164d56972-546b9b5c56e15-hero.jpg"
+                                                             }
+                                                     },
+                                             @"actions" : @[
+                                                           @{
+                                                             @"type" : @"webpage",
+                                                             @"label" : @"Donate!",
+                                                             @"icon" : @{ @"id" : @"533" },
+                                                             @"data" : @{ @"URL" : @"http://MOBRO.CO/oamike" }
+                                                             },
+                                                           @{
+                                                             @"type" : @"share",
+                                                             @"label" : @"Share!",
+                                                             @"icon" : @{ @"id" : @"527" },
+                                                             @"data" : @{ @"URL" : @"Help Mike get the prize of most donations on his team! MOBRO.CO/oamike"}
+                                                             }
+                                                           ]
+                                             }
+                                     };
+    [_lpSession createWatermark:name richPayoffData:richPayoffData publicURL:url imageURL:imageURL completionHandler:^(UIImage *watermarkedImage, NSError *error) {
         if (watermarkedImage) {
             [self showAlert:@"Watermarked Image" image:watermarkedImage];
         } else {
