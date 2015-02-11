@@ -22,7 +22,7 @@ LivePaperSession *lpSession = [LivePaperSession createSessionWithClientID:”CLI
 ```
 5. Use `LivePaperSession` to create QR codes, watermark images and short URLs.
 
-### TO CREATE SHORT URL:
+### Creating Short URLs:
 
 ```objc
     NSString *name = @“My Short URL”;
@@ -36,7 +36,7 @@ LivePaperSession *lpSession = [LivePaperSession createSessionWithClientID:”CLI
     }];
 ```
 
-### TO CREATE QR CODE:
+### Creating QR Codes:
 
 ```objc
     NSString *name = @“My QR Code";
@@ -50,7 +50,7 @@ LivePaperSession *lpSession = [LivePaperSession createSessionWithClientID:”CLI
     }];
 ```
 
-### TO CREATE WATERMARK:
+### Watermarking Images:
 
 ```objc
     NSString *name = @“My Watermark";
@@ -65,7 +65,7 @@ LivePaperSession *lpSession = [LivePaperSession createSessionWithClientID:”CLI
     }];
 ```
 
-### TO CREATE WATERMARK WITH RICH PAYOFF DATA:
+### Watermarking Images with Rich Payoff:
 
 ```objc
     NSString *name = @“My Watermark With Rich Payoff";
