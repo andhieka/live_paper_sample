@@ -22,7 +22,7 @@ LPSession *lpSession = [LPSession createSessionWithClientID:”CLIENT_ID” secr
 ```
 5. Use `LPSession` to create QR codes, watermark images and short URLs.
 
-### TO CREATE SHORT URL:
+### Creating Short URLs:
 
 ```objc
     NSString *name = @“My Short URL”;
@@ -36,7 +36,7 @@ LPSession *lpSession = [LPSession createSessionWithClientID:”CLIENT_ID” secr
     }];
 ```
 
-### TO CREATE QR CODE:
+### Creating QR Codes:
 
 ```objc
     NSString *name = @“My QR Code";
@@ -50,7 +50,7 @@ LPSession *lpSession = [LPSession createSessionWithClientID:”CLIENT_ID” secr
     }];
 ```
 
-### TO CREATE WATERMARK:
+### Watermarking Images:
 
 ```objc
     NSString *name = @“My Watermark";
@@ -65,7 +65,7 @@ LPSession *lpSession = [LPSession createSessionWithClientID:”CLIENT_ID” secr
     }];
 ```
 
-### TO CREATE WATERMARK WITH RICH PAYOFF DATA:
+### Watermarking Images with Rich Payoff:
 
 ```objc
     NSString *name = @“My Watermark With Rich Payoff";
