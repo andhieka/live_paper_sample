@@ -14,7 +14,7 @@
 
 @interface ViewController ()
 
-@property(nonatomic, retain) LivePaperSession *lpSession;
+@property(nonatomic, retain) LPSession *lpSession;
 - (IBAction)onCreateShortURL:(id)sender;
 - (IBAction)onCreateQrCode:(id)sender;
 - (IBAction)onCreateWatermark:(id)sender;
@@ -28,7 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _lpSession = [LivePaperSession createSessionWithClientID:CLIENT_ID secret:CLIENT_SECRET];
+    _lpSession = [LPSession createSessionWithClientID:CLIENT_ID secret:CLIENT_SECRET];
 }
 
 - (void)didReceiveMemoryWarning {

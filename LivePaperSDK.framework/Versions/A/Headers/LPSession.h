@@ -1,6 +1,6 @@
 //
-//  LivePaperService.h
-//  LinkSampleApp
+//  LPSession.h
+//  LivePaperSDK
 //
 //  Created by Steven Say on 2/5/15.
 //  Copyright (c) 2015 Hewlett-Packard. All rights reserved.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface LivePaperSession : NSObject
+@interface LPSession : NSObject
 
 + (instancetype)createSessionWithClientID:(NSString *) clientID secret:(NSString *) secret;
 
