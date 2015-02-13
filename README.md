@@ -130,7 +130,8 @@ The SDK supports full CRUD operations on the underlying objects. If you do not n
           }
         }
       }];
-   }];
+    }
+  }];
 ```
 
 After creating, you will need to persist the link, payoff, and trigger IDs in some form of
@@ -210,14 +211,16 @@ You can list existing resources with the list operation.
       [LPPayoff createWeb:lpSession name:name url:url completionHander:^(LPPayoff *payoff, NSError *error) {
         if (payoff) {
           [LPLink create:lpSession name:name triggerId:trigger.triggerId payoffId:payoff.payoffId completionHandler:^(LPLink *link, NSError *error) {
-          if (link) {
-            [trigger getQrCodeImage:^(UIImage *image, NSError *error) {
-              image; // returns QR Code image
-            }];
-          }
+            if (link) {
+              [trigger getQrCodeImage:^(UIImage *image, NSError *error) {
+                image; // returns QR Code image
+              }];
+            }
+          }];
         }
       }];
-   }];
+    }
+  }];
 ```
 
 ### Watermarked Image Example
@@ -232,17 +235,19 @@ You can list existing resources with the list operation.
       [LPPayoff createWeb:lpSession name:name url:url completionHander:^(LPPayoff *payoff, NSError *error) {
         if (payoff) {
           [LPLink create:lpSession name:name triggerId:trigger.triggerId payoffId:payoff.payoffId completionHandler:^(LPLink *link, NSError *error) {
-          if (link) {
-            // Download watermark image
-            [trigger getWatermarkImageWithStrength:10 resolution:75 completionHandler:^(UIImage *image, NSError *error) {
-              if (image) {
-                image; // returns Watermark image
-              }
-            }];
-          }
+            if (link) {
+              // Download watermark image
+              [trigger getWatermarkImageWithStrength:10 resolution:75 completionHandler:^(UIImage *image, NSError *error) {
+                if (image) {
+                  image; // returns Watermark image
+                }
+              }];
+            }
+          }];
         }
       }];
-   }];
+    }
+  }];
 ```
 
 ## Sample App:
