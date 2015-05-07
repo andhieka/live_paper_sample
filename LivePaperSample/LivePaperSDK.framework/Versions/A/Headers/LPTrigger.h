@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "LPSession.h"
 
-NSString *const LPTriggerErrorDomain;
+FOUNDATION_EXPORT NSString *const LPTriggerErrorDomain;
 
 enum LPTriggerErrorCode {
     Not_Supported = 1
