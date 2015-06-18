@@ -2,7 +2,6 @@
 //  LPTrigger.h
 //  LivePaperSDK
 //
-//  Created by Steven Say on 2/7/15.
 //  Copyright (c) 2015 Hewlett-Packard. All rights reserved.
 //
 
