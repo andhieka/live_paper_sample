@@ -14,7 +14,8 @@
 		2C8166371A85EBC10091D4B5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8166361A85EBC10091D4B5 /* Images.xcassets */; };
 		2C81663A1A85EBC10091D4B5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C8166381A85EBC10091D4B5 /* LaunchScreen.xib */; };
 		2C8166461A85EBC10091D4B5 /* LivePaperSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8166451A85EBC10091D4B5 /* LivePaperSampleTests.m */; };
-		2C81665C1A85F2C60091D4B5 /* LivePaperSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C81665B1A85F2C60091D4B5 /* LivePaperSDK.framework */; };
+		5EF3D6271B324137000243F9 /* LivePaperSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3D6261B324137000243F9 /* LivePaperSDK.framework */; };
+		5EF3D6281B324137000243F9 /* LivePaperSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3D6261B324137000243F9 /* LivePaperSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,7 @@
 		2C81663F1A85EBC10091D4B5 /* LivePaperSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LivePaperSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8166441A85EBC10091D4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8166451A85EBC10091D4B5 /* LivePaperSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePaperSampleTests.m; sourceTree = "<group>"; };
-		2C81665B1A85F2C60091D4B5 /* LivePaperSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LivePaperSDK.framework; sourceTree = "<group>"; };
+		5EF3D6261B324137000243F9 /* LivePaperSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LivePaperSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C81665C1A85F2C60091D4B5 /* LivePaperSDK.framework in Frameworks */,
+				5EF3D6271B324137000243F9 /* LivePaperSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF3D6281B324137000243F9 /* LivePaperSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,7 +128,7 @@
 		2C81665D1A85F2CB0091D4B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2C81665B1A85F2C60091D4B5 /* LivePaperSDK.framework */,
+				5EF3D6261B324137000243F9 /* LivePaperSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -388,6 +390,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -407,6 +410,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LivePaperSampleTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

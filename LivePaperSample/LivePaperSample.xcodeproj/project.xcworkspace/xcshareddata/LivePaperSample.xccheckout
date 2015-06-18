@@ -12,22 +12,34 @@
 	<dict>
 		<key>EC68EF32D99B09EE3A2B4863CD5613FBE3DC2800</key>
 		<string>github.com:IPGPTP/neon_sdk_ios.git</string>
+		<key>F40E06DE00FE18AF03C687D94B4647A9AFE63457</key>
+		<string>github.com:IPGPTP/live_paper_sample.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>LivePaperSample/LivePaperSample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>EC68EF32D99B09EE3A2B4863CD5613FBE3DC2800</key>
+		<string>../../../../neon_sdk_ios</string>
+		<key>F40E06DE00FE18AF03C687D94B4647A9AFE63457</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:IPGPTP/neon_sdk_ios.git</string>
+	<string>github.com:IPGPTP/live_paper_sample.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>EC68EF32D99B09EE3A2B4863CD5613FBE3DC2800</string>
+	<string>F40E06DE00FE18AF03C687D94B4647A9AFE63457</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F40E06DE00FE18AF03C687D94B4647A9AFE63457</string>
+			<key>IDESourceControlWCCName</key>
+			<string>live_paper_sample</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
