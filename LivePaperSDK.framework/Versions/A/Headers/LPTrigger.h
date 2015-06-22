@@ -2,7 +2,6 @@
 //  LPTrigger.h
 //  LivePaperSDK
 //
-//  Created by Steven Say on 2/7/15.
 //  Copyright (c) 2015 Hewlett-Packard. All rights reserved.
 //
 
@@ -27,9 +26,7 @@ enum LPTriggerErrorCode {
 
 + (void) createQrCode:(LPSession *) session name:(NSString *) name completionHandler:(void (^)(LPTrigger *trigger, NSError *error)) handler;
 
-+ (void) createWatermark:(LPSession *) session name:(NSString *) name startDate:(NSDate *) startDate endDate:(NSDate *) endDate image:(UIImage *) image completionHandler:(void (^)(LPTrigger *trigger, NSError *error)) handler;
-
-+ (void) createWatermark:(LPSession *) session name:(NSString *) name image:(UIImage *) image completionHandler:(void (^)(LPTrigger *trigger, NSError *error)) handler;
++ (void) createWatermark:(LPSession *)session name:(NSString *)name completionHandler:(void (^)(LPTrigger *,NSError *))handler;
 
 + (void) get:(LPSession *) session triggerId:(NSString *) triggerId completionHandler:(void (^)(LPTrigger *trigger, NSError *error)) handler;
 
@@ -53,12 +50,24 @@ enum LPTriggerErrorCode {
 
 - (void) getQrCodeImage:(void (^)(UIImage *image, NSError *error)) handler;
 
-- (void) getWatermarkImage:(void (^)(UIImage *image, NSError *error)) handler;
+/*
+ Get the watermarked image at a URL with the default strength and resolution
+ */
+- (void) getWatermarkForImageURL:(NSURL *) imageURL completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
 
-- (void) getWatermarkImageWithStrength:(int) strength resolution:(float) resolution completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
+/*
+ Get the watermarked image at a URL with a given strength and resolution.
+ */
+- (void) getWatermarkForImageURL:(NSURL *) imageURL strength:(int) strength resolution:(int) resolution completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
 
-- (void) getWatermarkForImageURL:(NSURL *) imageURL strength:(int) strength resolution:(float) resolution completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
+/*
+ Upload an image and watermark it using the default strength and resolution
+ */
+- (void) getWatermarkForImage:(UIImage *)image completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
 
+/*
+ Upload an image and watermark it using the gien strength and resolution
+ */
 - (void) getWatermarkForImage:(UIImage *)image strength:(int) strength resolution:(float) resolution completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
 
 - (void) update:(void (^)(NSError *error)) handler;
