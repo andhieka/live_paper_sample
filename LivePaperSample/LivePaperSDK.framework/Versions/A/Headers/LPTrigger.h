@@ -10,10 +10,6 @@
 
 FOUNDATION_EXPORT NSString *const LPTriggerErrorDomain;
 
-enum LPTriggerErrorCode {
-    Not_Supported = 1
-};
-
 @interface LPTrigger : NSObject
 
 + (void) create:(LPSession *) session json:(NSDictionary *) json completionHandler:(void (^)(LPTrigger *trigger, NSError *error)) handler;

@@ -8,11 +8,24 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+FOUNDATION_EXTERN NSString *const LPSessionErrorDomain;
+
+typedef NS_ENUM(NSUInteger, LPErrorCode) {
+    Not_Supported,
+    Bad_Response
+};
+
+
 @interface LPSession : NSObject
 
 + (instancetype)createSessionWithClientID:(NSString *) clientID secret:(NSString *) secret;
 
 @property (readonly, retain) NSString *accessToken;
+
+@property (readonly, retain) NSString *projectId;
+
+
++ (NSString*) version;
 
 - (void) retrieveAccessToken:(void (^)(NSString *accessToken, NSError *error)) handler;
 

@@ -23,6 +23,7 @@
 @property(nonatomic, readonly) NSString *payoffId;
 @property(nonatomic, retain) NSString *name;
 @property(nonatomic, retain) NSURL *url;
+@property(nonatomic, retain) NSString *type;
 @property(nonatomic, retain) NSDictionary *richPayoffData;
 @property(nonatomic, readonly) NSArray *link;
 
