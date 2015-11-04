@@ -227,17 +227,17 @@ You can list existing resources with the list operation.
 
 ```objc
   NSString *name = @“Watermark Example";
-  UIImage *image = [UIImage imageNamed:@"image_to_watermark"];
+  NSData *imageData = [NSData dataWithContentsOfFile:@"file path to image to watermark"];
   NSURL *url = [NSURL URLWithString:@"http://www.hp.com"];
   LPSession *lpSession = [LPSession createSessionWithClientID:@”your client id” secret:@”your client secret”];
   [LPTrigger createWatermark:lpSession name:name completionHandler:^(LPTrigger *trigger, NSError *error) {
     if (trigger) {
-      [LPPayoff createWeb:lpSession name:name url:url completionHander:^(LPPayoff *payoff, NSError *error) {
+      [LPPayoff createWeb:lpSession name:name url:url completionHandler:^(LPPayoff *payoff, NSError *error) {
         if (payoff) {
           [LPLink create:lpSession name:name triggerId:trigger.triggerId payoffId:payoff.payoffId completionHandler:^(LPLink *link, NSError *error) {
             if (link) {
               // Download watermark image
-              [trigger getWatermarkForImage:image strength:10 resolution:75 completionHandler:^(UIImage *image, NSError *error) {
+              [trigger getWatermarkForImageData:imageData strength:10 watermarkResolution:75 imageResolution:75 completionHandler:^(UIImage *image, NSError *error) {
                 if (image) {
                   image; // returns Watermark image
                 }
