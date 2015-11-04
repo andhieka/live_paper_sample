@@ -16,6 +16,7 @@
 		2C8166461A85EBC10091D4B5 /* LivePaperSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8166451A85EBC10091D4B5 /* LivePaperSampleTests.m */; };
 		5EF3D6271B324137000243F9 /* LivePaperSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3D6261B324137000243F9 /* LivePaperSDK.framework */; };
 		5EF3D6281B324137000243F9 /* LivePaperSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF3D6261B324137000243F9 /* LivePaperSDK.framework */; };
+		744B4C221BEA95CE00936257 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 744B4C211BEA95CE00936257 /* ImageIO.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		2C8166441A85EBC10091D4B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C8166451A85EBC10091D4B5 /* LivePaperSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LivePaperSampleTests.m; sourceTree = "<group>"; };
 		5EF3D6261B324137000243F9 /* LivePaperSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LivePaperSDK.framework; sourceTree = "<group>"; };
+		744B4C211BEA95CE00936257 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744B4C221BEA95CE00936257 /* ImageIO.framework in Frameworks */,
 				5EF3D6271B324137000243F9 /* LivePaperSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +131,7 @@
 		2C81665D1A85F2CB0091D4B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				744B4C211BEA95CE00936257 /* ImageIO.framework */,
 				5EF3D6261B324137000243F9 /* LivePaperSDK.framework */,
 			);
 			name = Frameworks;

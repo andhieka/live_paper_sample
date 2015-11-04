@@ -54,17 +54,17 @@ FOUNDATION_EXPORT NSString *const LPTriggerErrorDomain;
 /*
  Get the watermarked image at a URL with a given strength and resolution.
  */
-- (void) getWatermarkForImageURL:(NSURL *) imageURL strength:(int) strength resolution:(int) resolution completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
+- (void) getWatermarkForImageURL:(NSURL *) imageURL strength:(int) strength watermarkResolution:(int)watermarkResolution imageResolution:(int)imageResolution completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
 
 /*
  Upload an image and watermark it using the default strength and resolution
  */
-- (void) getWatermarkForImage:(UIImage *)image completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
+- (void) getWatermarkForImageData:(NSData *)data completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
 
 /*
  Upload an image and watermark it using the gien strength and resolution
  */
-- (void) getWatermarkForImage:(UIImage *)image strength:(int) strength resolution:(float) resolution completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
+- (void) getWatermarkForImageData:(NSData *)imageData strength:(int) strength watermarkResolution:(int)watermarkResolution imageResolution:(int)imageResolution completionHandler:(void (^)(UIImage *image, NSError *error)) handler;
 
 - (void) update:(void (^)(NSError *error)) handler;
 
